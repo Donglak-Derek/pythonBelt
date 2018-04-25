@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	{% load static %}
+      <link rel="stylesheet" href="{% static 'pybelt/css/styles.css' %}" media="screen" title="no title"  charset="utf-8">
+
+</head>
+<body>
+	<div class="messages">
+		{% if messages %}
+			{% for message in messages %}
+				<p>{{message}}</p>
+			{% endfor%}
+		{% endif %}
+	</div>
+	<a href="/travels">Home</a>
+	<a href="/logout">Logout</a>
+	</div>
+		<h1>Add a Trip</h1>
+		<div class="block">
+			<form action = '/add' method="post">
+			{% csrf_token %}
+			<p><label for="destination">Destination:</label>
+			<input type="text" name="destination"></p>
+			<p><label for="desc">Description :</label>
+			<input type="text" name="desc"></p>
+			<p><label for="start_day">Travel Date Form: </label>
+			<input type="date" name="start_day"></p>
+			<p><label for="end_day">Tranvel Date To: </label>
+			<input type="date" name="end_day"></p>
+			<p><input type="submit" name="add" value="Add"></p>
+			</form>
+		</div>
+</body>
+</html>

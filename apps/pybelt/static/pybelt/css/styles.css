@@ -1,0 +1,28 @@
+body {
+	padding: 50px;
+}
+.messages{
+	/*width: 500px;*/
+	height: 150px;
+	/*border: solid black thin;*/
+	padding: 0 30px;
+}
+
+.block{
+	display: inline-block;
+	width: 35%;
+	vertical-align: top;
+	/*height: 350px;*/
+	border: solid black thin;
+	padding: 30px;
+	text-align: right;
+	margin: 10px
+}
+#middle {
+	display: inline-block;
+	width: 20%;
+}
+
+.W{
+
+}

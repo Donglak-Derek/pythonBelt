@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	{% load static %}
+      <link rel="stylesheet" href="{% static 'pybelt/css/styles.css' %}" media="screen" title="no title"  charset="utf-8">
+</head>
+<body>
+	<div class="messages">
+		{% if messages %}
+			{% for message in messages %}
+				<p>{{message}}</p>
+			{% endfor%}
+		{% endif %}
+	</div>
+	<h3>Welcome</h3>
+	<div class="block">
+		<h3>Register</h3>
+		<form action = 'register' method="post">
+		{% csrf_token %}
+		<p><label for="name">name</label>
+		<input type="text" name="name"></p>
+		<p><label for="username">Username</label>
+		<input type="text" name="username"></p>
+		<p><label for="password">Password</label>
+		<input type="password" name="password"></p>
+		<p><label>Confirm PW</label>
+		<input type="password" name="cpassword"></p>
+		<p><input type="submit" name="Register" value="Register"></p>
+		</form>
+	</div>
+	<div class="block">
+		<h3>Login</h3>
+		<form action = 'login' method="post">
+		{% csrf_token %}
+		<p><label for="username">Username</label>
+		<input type="text" name="username"></p>
+		<p><label for="password">Password</label>
+		<input type="password" name="password"></p>
+		<p><input type="submit" name="Login" value="Login"></p>
+		</form>
+	</div>
+</body>
+</html>

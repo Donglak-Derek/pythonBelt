@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Destinations</title>
+</head>
+<body>			
+	<a href="/travels">Dashboard</a>
+	<a href="/logout">Logout</a>
+
+
+	<h2>{{trip.destination}}</h2>
+	<p>{{trip.desc}}</p>
+	<p>{{trip.start_day}}</p>
+	<p>{{trip.end_day}}</p>
+
+
+	
+	<h2>Other's user' joining the trip:</h2>
+	{% for f in other_users %}
+		
+		<p>{{f.name}}</p>
+		
+	
+	{% endfor %}
+</body>
+</html>
